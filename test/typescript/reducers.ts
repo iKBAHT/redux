@@ -24,7 +24,7 @@ const todosReducer: Reducer<TodosState> = (state: TodosState,
 const todosState: TodosState = todosReducer([], {
   type: 'ADD_TODO',
   text: 'test',
-});
+}, []);
 
 
 type CounterState = number;
@@ -56,4 +56,4 @@ const rootReducer: Reducer<RootState> = combineReducers<RootState>({
 const rootState: RootState = rootReducer(undefined, {
   type: 'ADD_TODO',
   text: 'test',
-})
+}, undefined)
